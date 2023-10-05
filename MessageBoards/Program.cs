@@ -11,22 +11,7 @@ List<User> users = new List<User>();
 var messageStore = new List<Message>();
 var sendMessageCommandHandler = new SendMessageCommandHandler(messageStore);
 var readTimelineQueryHandler = new ReadTimelineQueryHandler(messageStore);
-// create instance
-var alice = new User { UserId = 1, Name = "Alice" , JoinedProjects = new List<Project>(), SentMessages = new List<Message>()};
-var bob = new User { UserId = 2, Name = "Bob" };
 
-// add list
-users.Add(alice);
-users.Add(bob);
-
-// create project
-var moonshot = new Project { ProjectId = 1, ProjectName = "Moonshot",Members = new List<User>() , Messages = new List<Message>()};
-
-// add members
-moonshot.Members.Add(alice);
-moonshot.Members.Add(bob);
- 
-projects.Add(moonshot);
 
 
  while (1 == 1)
@@ -34,9 +19,10 @@ projects.Add(moonshot);
      Console.WriteLine("Please, enter a message (format: Alice -> @Moonshot I'm working on the log on screen):");
     
      string userInput = Console.ReadLine();
-
+ 
      if (userInput.Contains("@"))
      {
+
          string pattern = @"^(.*?) -> @(.*?) (.*)$";
 
          // split to text
@@ -47,10 +33,20 @@ projects.Add(moonshot);
              string senderName = match.Groups[1].Value.Trim();
              string projectName = match.Groups[2].Value.Trim();
              string content = match.Groups[3].Value.Trim();
-             
-             User sender = users.Find(user => user.Name == senderName);
-             Project project = projects.Find((project => project.ProjectName == projectName));
+             User sender = users.FirstOrDefault(user => user.Name == senderName);
 
+             if (sender == null)
+             {
+                 sender = new User { Name = senderName , JoinedProjects = new List<Project>(), SentMessages = new List<Message>()};
+             }
+
+
+             Project project = projects.FirstOrDefault((project => project.ProjectName == projectName));
+             if (project == null)
+             {
+                 project =  new Project { ProjectName = projectName,Members = new List<User>() , Messages = new List<Message>()};
+
+             }
              // save message
              if (sender != null && project != null)
              {
