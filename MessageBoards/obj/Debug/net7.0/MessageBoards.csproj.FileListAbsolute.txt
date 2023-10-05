@@ -1,0 +1,15 @@
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/bin/Debug/net7.0/MessageBoards
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/bin/Debug/net7.0/MessageBoards.deps.json
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/bin/Debug/net7.0/MessageBoards.runtimeconfig.json
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/bin/Debug/net7.0/MessageBoards.dll
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/bin/Debug/net7.0/MessageBoards.pdb
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.csproj.AssemblyReference.cache
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.GeneratedMSBuildEditorConfig.editorconfig
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.AssemblyInfoInputs.cache
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.AssemblyInfo.cs
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.csproj.CoreCompileInputs.cache
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.dll
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/refint/MessageBoards.dll
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.pdb
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/MessageBoards.genruntimeconfig.cache
+/Users/zeynep/RiderProjects/MessageBoards/MessageBoards/obj/Debug/net7.0/ref/MessageBoards.dll
