@@ -16,11 +16,6 @@ public class GetUserProjectsQueryHandler : IQueryHandler<GetUserProjectsQuery, L
     {
         var user = _users.FirstOrDefault(u => u.Name == query.UserName);
 
-        if (user == null)
-        {
-            return null;
-        }
-
-        return user.JoinedProjects;
+        return user?.JoinedProjects;
     }
 }

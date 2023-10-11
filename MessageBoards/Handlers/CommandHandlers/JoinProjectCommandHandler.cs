@@ -16,7 +16,7 @@ public class JoinProjectCommandHandler : ICommandHandler<JoinProjectCommand>
 
     public void Handle(JoinProjectCommand command)
     {
-        User user = _users.FirstOrDefault(u => u.Name == command.UserName);
+        var user = _users.FirstOrDefault(u => u.Name == command.UserName);
         
         if (user == null)
         {
@@ -24,7 +24,7 @@ public class JoinProjectCommandHandler : ICommandHandler<JoinProjectCommand>
             _users.Add(user);
         }
         
-        Project project = _projects.FirstOrDefault(project => project.ProjectName == command.ProjectName);
+        var project = _projects.FirstOrDefault(project => project.ProjectName == command.ProjectName);
         
         if (project == null)
         {
