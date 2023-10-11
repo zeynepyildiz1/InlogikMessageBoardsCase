@@ -3,11 +3,11 @@ using MessageBoards.Entities;
 
 namespace MessageBoards.Handlers;
 
-public class ProjectMessageQueryHandler
+public class GetProjectMessagesQueryHandler : IQueryHandler<GetProjectMessagesQuery, List<Message>>
 {
     private readonly List<Message> _messageStore;
 
-    public ProjectMessageQueryHandler(List<Message> messageStore)
+    public GetProjectMessagesQueryHandler(List<Message> messageStore)
     {
         _messageStore = messageStore;
     }

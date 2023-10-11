@@ -3,9 +3,11 @@ using MessageBoards.Entities;
 
 namespace MessageBoards.Application.Queries;
 
-public class SendMessageCommandHandler
+public class SendMessageCommandHandler : ICommandHandler<SendMessageCommand>
 {
-    private List<Message> _messageStore;
+    private readonly List<Message> _messageStore;
+    //readonly make it immuteable. so you can't assigne diffrent value but you can modified the content.
+    //you can do add or remove operations.
 
     public SendMessageCommandHandler(List<Message> messageStore)
     {
@@ -23,5 +25,7 @@ public class SendMessageCommandHandler
         };
 
         _messageStore.Add(message);
+        command.Sender.SentMessages.Add(message);
+        command.Project.Messages.Add(message);
     }
 }
